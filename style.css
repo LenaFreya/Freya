@@ -1,0 +1,15 @@
+html,body{margin:0;height:100%;overflow:hidden;background:#000;font-family:Courier New,monospace}
+#container,#overlay{position:fixed;inset:0}
+#overlay{pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.03)0 1px,transparent 2px 4px)}
+.text{position:absolute;white-space:pre;opacity:0;animation:fade 8s forwards;text-shadow:0 0 8px currentColor}
+.red{color:#ff4040}.blue{color:#4fa8ff}.green{color:#7dff7d;font-weight:bold}
+.cursor{animation:blink .8s steps(1) infinite}
+.glitch{animation:fade 8s forwards,glitch .18s infinite}
+@keyframes fade{0%{opacity:0}8%{opacity:1}85%{opacity:1}100%{opacity:0}}
+@keyframes blink{50%{opacity:0}}
+@keyframes glitch{
+0%,100%{transform:translate(0)}
+25%{transform:translate(-2px,1px)}
+50%{transform:translate(2px,-1px)}
+75%{transform:translate(-1px,-2px)}
+}
